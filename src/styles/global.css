@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'Larken';
+  src: url('/fonts/LarkenDEMO-Black.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@theme {
+  /* Font Family */
+  /* --font-lora: "Lora", serif;
+  --font-raleway: "Raleway", sans-serif; */
+
+  /* blue scale */
+  --color-blue-50: #8DB8E7;
+  --color-blue-100: #2B62A4;
+  --color-blue-200: #3F5B7F;
+  
+  /* red scale */
+  --color-red-50: #7F3F44;
+
+  /* yellow scale */
+  --color-yellow-50: #FFF4C8;
+  --color-yellow-100: #FFE57B;
+  --color-yellow-200: #FECA1D;
+}
