@@ -3,7 +3,7 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
   font-family: 'Larken';
-  src: url('/fonts/LarkenDEMO-Black.otf') format('otf');
+  src: url('../fonts/LarkenDEMO-Black.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,8 +12,7 @@
 
 @theme {
   /* Font Family */
-  /* --font-lora: "Lora", serif;
-  --font-raleway: "Raleway", sans-serif; */
+  --font-larken: "Larken", serif;
 
   /* blue scale */
   --color-blue-50: #8DB8E7;

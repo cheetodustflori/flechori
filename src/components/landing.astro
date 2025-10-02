@@ -1,42 +1,78 @@
 <section
-    id="hero"
-    class="flex flex-col relative border-1 w-full sm:min-h-[700px] min-h-[500px] background-layer overflow-hidden p-[50px] gap-[15px]"
-  >
-    <div id="header" class="items-center w-full flex justify-between">
-      <div class="flex flex-row items-center gap-5">
-        <p class="text-5xl font-bold">flechori</p>
-        <img src="../../public/favicon.svg" width="25px" />
-      </div>
-      <div class="flex gap-[15px]">
-        <img src="src/assets/star.svg" />
-        <img src="src/assets/star.svg" />
-        <img src="src/assets/star.svg" />
-      </div>
+  id="hero"
+  class="flex flex-col relative border-1 w-full sm:min-h-[700px] min-h-[500px] background-layer overflow-hidden p-[50px] gap-[15px]"
+>
+  <div id="header" class="items-center w-full flex justify-between">
+    <div class="flex flex-row items-center gap-5">
+      <p class="text-5xl font-bold">flechori</p>
+      <img src="../../public/favicon.svg" width="25px" />
     </div>
-    <div id="container" class="flex flex-row gap-[15px]">
-      <div id="polaroid-section">
-        <img
-          src="src/assets/polaroid.png"
-          width="250px"
-          class="min-w-[250px]"
-        />
-      </div>
-      <div id="quote-container">
-        <p class="max-w-[350px] min-w-[350px] mt-[15px]">
-          “For by <b>him</b> all things were <b>created</b>
-          in heaven and on earth, visible and invisible, <i
-            >whether thrones or dominions or rulers or authorities</i
-          >—all things were created <span class="text-blue-50"
-            >through him and for him.”</span
-          >
-        </p>
-        <p class="text-blue-100 font-bold">Colossians 1:16</p>
-        <img src="src/assets/landingicon.svg" width="600px" class="relative" />
-      </div>
-      <div class="flex flex-col gap-[15px] items-end justify-end">
-        <button>pages</button>
-        <button>works</button>
-        <button>flicks</button>
-      </div>
+    <div class="flex gap-[15px]">
+      <img class="landing-star" src="src/assets/star.svg" />
+      <img class="landing-star" src="src/assets/star.svg" />
+      <img class="landing-star" src="src/assets/star.svg" />
     </div>
-  </section>
+  </div>
+  <div id="container" class="flex flex-row gap-[15px] justify-center">
+    <a id="polaroid-section" href="/gallery">
+      <img
+        id="polaroid"
+        src="src/assets/polaroid.png"
+        width="250px"
+        class="min-w-[250px]"
+      />
+    </a>
+    <div id="quote-container">
+      <p class="max-w-[350px] min-w-[350px] mt-[15px]">
+        “For by <b>him</b> all things were <b>created</b>
+        in heaven and on earth, visible and invisible, <i
+          >whether thrones or dominions or rulers or authorities</i
+        >—all things were created <span class="text-blue-50"
+          >through him and for him.”</span
+        >
+      </p>
+      <p class="text-blue-100 font-bold">Colossians 1:16</p>
+      <img src="src/assets/landingicon.svg" width="600px" class="relative" />
+    </div>
+    <div class="flex flex-col gap-[15px] items-end justify-end">
+      <button class="landing-button">pages</button>
+      <button class="landing-button">works</button>
+      <button class="landing-button">flicks</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  #polaroid:hover {
+    position: relative;
+    transform: rotate(-5deg);
+    cursor: pointer;
+  }
+  #polaroid:active {
+    position: relative;
+    top: 5px;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0%);
+    }
+    40% {
+      transform: translateY(-50%);
+    }
+    60% {
+      transform: translateY(-30%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .landing-star:hover {
+    animation: bounce .5s ease-out forwards;
+  }
+</style>
+
+<script>
+ 
+</script>

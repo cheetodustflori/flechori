@@ -13,6 +13,16 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
-        <slot>Default Text</slot>
+        <slot/>
     </body>
 </html>
+
+<style is:global>
+    html,body{
+        font-family: 'Larken';
+        src: url('../fonts/LarkenDEMO-Black.otf') format('opentype');
+    }
+    button:hover{
+        cursor: pointer;
+    }
+</style>
