@@ -1,18 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 @import "tailwindcss";
 
 /* Register your custom font family and tell the browser where to find it. */
-@font-face {
+/* @font-face {
   font-family: 'Larken';
   src: url('../fonts/LarkenDEMO-Black.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */
+
+/* @font-face {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
 
 
 @theme {
   /* Font Family */
   --font-larken: "Larken", serif;
+  --font-pixel: "Pixelify Sans", sans-serif;
 
   /* blue scale */
   --color-blue-50: #8DB8E7;
