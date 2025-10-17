@@ -1,29 +1,26 @@
+---
+import Navbar from "./navbar.astro"
+import Apps from "./apps.astro";
+---
+
+<Navbar/>
 <section
   id="hero"
-  class="flex flex-col relative border-1 w-full sm:min-h-[700px] min-h-[500px] background-layer overflow-hidden p-[50px] gap-[15px]"
+  class="flex flex-row relative w-full sm:min-h-[700px] min-h-[500px] background-layer overflow-hidden p-[50px] gap-[30px]"
 >
-  <div id="header" class="items-center w-full flex justify-between">
-    <div class="flex flex-row items-center gap-5">
-      <p class="text-5xl font-bold">flechori</p>
-      <img src="../../public/favicon.svg" width="25px" />
-    </div>
-    <div class="flex gap-[15px]">
-      <img class="landing-star" src="src/assets/star.svg" />
-      <img class="landing-star" src="src/assets/star.svg" />
-      <img class="landing-star" src="src/assets/star.svg" />
-    </div>
-  </div>
-  <div id="container" class="flex flex-row gap-[15px] justify-center">
-    <a id="polaroid-section" href="/gallery">
+
+  <div id="profile-container" class="flex flex-col gap-[15px]">
+    <a id="polaroid-section" href="/gallery" class="w-fit">
       <img
         id="polaroid"
         src="src/assets/polaroid.png"
-        width="250px"
-        class="min-w-[250px]"
+        width="200px"
+        class="min-w-[200px]"
       />
     </a>
+    <p class="text-4xl font-bold">flechori</p>
     <div id="quote-container">
-      <p class="max-w-[350px] min-w-[350px] mt-[15px]">
+      <p class="max-w-[300px] min-w-[300px]">
         “For by <b>him</b> all things were <b>created</b>
         in heaven and on earth, visible and invisible, <i
           >whether thrones or dominions or rulers or authorities</i
@@ -32,13 +29,15 @@
         >
       </p>
       <p class="text-blue-100 font-bold">Colossians 1:16</p>
-      <img src="src/assets/landingicon.svg" width="600px" class="relative" />
     </div>
-    <div class="flex flex-col gap-[15px] items-end justify-end">
-      <button class="landing-button">pages</button>
-      <button class="landing-button">works</button>
-      <button class="landing-button">flicks</button>
+    <div class="flex flex-col gap-[15px] items-start justify-start">
+      <button class="landing-button  border-1 p-[10px] rounded-3xl">univ. of il. at chicago</button>
+      <button class="landing-button border-1 p-[10px] rounded-3xl">computer science</button>
+      <button class="landing-button border-1 p-[10px] rounded-3xl">low on cheetos...</button>
     </div>
+  </div>
+  <div id="main-container" class="flex justify-center align-middle items-center">
+    <Apps/>
   </div>
 </section>
 
