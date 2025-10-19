@@ -1,45 +1,33 @@
 ---
-import Navbar from "./navbar.astro"
+
 import Apps from "./apps.astro";
+import Projects from "./projects.astro";
+import Experience from "./experience.astro";
+import Flick from "./flick.astro";
+import Album from "./album.astro";
+import Music from "./music.astro";
 ---
 
-<Navbar/>
-<section
-  id="hero"
-  class="flex flex-row relative w-full sm:min-h-[700px] min-h-[500px] background-layer overflow-hidden p-[50px] gap-[30px]"
+<div
+  id="landing-container"
+  class="items-center grid grid-cols-3 sm:min-h-[700px] min-h-[500px] gap-[15px] mt-[130px]"
 >
 
-  <div id="profile-container" class="flex flex-col gap-[15px]">
-    <a id="polaroid-section" href="/gallery" class="w-fit">
-      <img
-        id="polaroid"
-        src="src/assets/polaroid.png"
-        width="200px"
-        class="min-w-[200px]"
-      />
-    </a>
-    <p class="text-4xl font-bold">flechori</p>
-    <div id="quote-container">
-      <p class="max-w-[300px] min-w-[300px]">
-        “For by <b>him</b> all things were <b>created</b>
-        in heaven and on earth, visible and invisible, <i
-          >whether thrones or dominions or rulers or authorities</i
-        >—all things were created <span class="text-blue-50"
-          >through him and for him.”</span
-        >
-      </p>
-      <p class="text-blue-100 font-bold">Colossians 1:16</p>
-    </div>
-    <div class="flex flex-col gap-[15px] items-start justify-start">
-      <button class="landing-button  border-1 p-[10px] rounded-3xl">univ. of il. at chicago</button>
-      <button class="landing-button border-1 p-[10px] rounded-3xl">computer science</button>
-      <button class="landing-button border-1 p-[10px] rounded-3xl">low on cheetos...</button>
-    </div>
+<div class="flex flex-col">
+  <Album/>
+  <Apps/>
+  <Flick/>
+</div>
+
+  <div id="proj-exp-container" class="flex flex-col gap-[15px]">
+    <Projects />
+    <Experience />
+    
   </div>
-  <div id="main-container" class="flex justify-center align-middle items-center">
-    <Apps/>
+  <div id="extra-container">
+    <Music/>
   </div>
-</section>
+</div>
 
 <style>
   #polaroid:hover {
@@ -68,6 +56,6 @@ import Apps from "./apps.astro";
   }
 
   .landing-star:hover {
-    animation: bounce .5s ease-out forwards;
+    animation: bounce 0.5s ease-out forwards;
   }
 </style>

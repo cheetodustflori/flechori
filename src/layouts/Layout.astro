@@ -1,28 +1,45 @@
 ---
-import './src/styles/global.css'
+import "./src/styles/global.css";
+import Navbar from "../components/navbar.astro";
+import Profile from "../components/profile.astro";
 
 const { title } = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-        <title>{title}</title>
-    </head>
-    <body>
-        <slot/>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <section
+      id="hero"
+      class="flex flex-row w-full p-[15px] sm:min-h-[700px] min-h-[500px] background-layer overflow-hidden gap-[30px] "
+    >
+      <Profile/>
+      
+      <div
+        id="main-container"
+        class="flex w-full align-middle items-center"
+      >
+        <slot />
+      </div>
+    </section>
+    
+  </body>
 </html>
 
 <style is:global>
-    html,body{
-        font-family: 'Larken';
-        src: url('../fonts/LarkenDEMO-Black.otf') format('opentype');
-    }
-    button:hover{
-        cursor: pointer;
-    }
+  html,
+  body {
+    font-family: "Larken";
+    src: url("../fonts/LarkenDEMO-Black.otf") format("opentype");
+  }
+  button:hover {
+    cursor: pointer;
+  }
 </style>

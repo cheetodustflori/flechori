@@ -1,7 +1,30 @@
 <section id="navbar" class="bg-blue-25 absolute w-full sm:min-h-[175px] min-h-[500px] background-layer overflow-hidden">
-<div id="folders" class="absolute bottom-0 right-15">
-    <button class="bg-white p-[15px] rounded-t-xl min-w-[150px] border-t-2 border-l-2 border-r-2">home</button>
-    <button class="bg-white p-[15px] rounded-t-xl min-w-[200px] border-t-2 border-l-2 border-r-2">backyard</button>
-    <button class="bg-white p-[15px] rounded-t-xl min-w-[150px] border-t-2 border-l-2 border-r-2">rooftop</button>
-</div>
+    <div id="navbar-status" class="font-pixel flex text-white font-bold relative m-[15px] justify-end align-middle items-center">
+        <h3 id="day"></h3>
+        <h3> : </h3>
+        <h3 id="date"></h3>
+    </div>
+        <div id="folders" class="absolute bottom-0 right-15">
+        <a href="/"><button class="bg-white p-[15px] rounded-t-xl min-w-[150px] hover:cursor-pointer"> ☆ home</button></a>
+        <a href="/"><button class="bg-white p-[15px] rounded-t-xl min-w-[200px] hover:cursor-pointer"> ☽ backyard</button></a>
+        <a href="/"><button class="bg-white p-[15px] rounded-t-xl min-w-[150px] hover:cursor-pointer"> ☘︎ ݁˖ rooftop</button><a href="/"></a>
+    </div>
 </section>
+
+<script>
+
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+
+var dateElement = document.getElementById("date");
+var dayElement = document.getElementById("day");
+if(dateElement && dayElement){
+    var today = new Date();
+    var formattedDate = today.toLocaleDateString();
+    dateElement.innerHTML = formattedDate;
+
+    var dayName = days[today.getDay()];
+    var formattedDayName = dayName.toUpperCase();
+    dayElement.innerHTML = formattedDayName;
+}
+</script>
