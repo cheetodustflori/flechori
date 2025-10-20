@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   // enables API routes
-  output: 'server',
+  output: 'static',
 
   // deploy target
   adapter: vercel(),
