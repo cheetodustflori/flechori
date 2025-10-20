@@ -5,10 +5,19 @@ import vercel from "@astrojs/vercel";
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  output: 'server',         // enables API routes
-  adapter: vercel(),        // deploy target
-  integrations: [],         // (you already have @astrojs/tailwind)
+  // enables API routes
+  output: 'server',
+
+  // deploy target
+  adapter: vercel(),
+
+  // (you already have @astrojs/tailwind)
   // site: 'https://yourdomain.com' // optional, set later when you add a domain
+  integrations: [],
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });
 
 // // https://astro.build/config
